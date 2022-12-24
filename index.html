@@ -1,0 +1,56 @@
+<html>
+    <meta charset="UTF-8">
+    <h1>05-03 Práctica juego adivinr</h1> <! 05-03 Práctica juego adivinar>
+    <h3>----------------------------------------------------------------</h3>
+    <br>
+    <br>
+    <script>
+        function saltarLinea() {
+            document.write("<br>");
+            document.write("<br>");         
+            }  
+        function imprimir(frase) {
+            document.write(frase);
+            saltarLinea();
+        }
+
+
+        function sorteo(n) {
+            return Math.round(Math.random()*n);
+        }
+
+        
+        var numeroMax = parseInt(prompt("Hasta qué número quieres adivinar")); 
+        var aleatorio = sorteo(numeroMax);
+        var jugador = parseInt(prompt("Adivina un número entre el 0 y el " + numeroMax));   
+
+        if(jugador>=0 && jugador<numeroMax){
+
+            if(jugador==aleatorio){
+                imprimir("<h3>¡Adivinaste!.. el número que pensé es: " + aleatorio + "<h3>");
+            }
+            else{
+                 imprimir("<h3>¡Perdiste!.. el número que pensé es: " + aleatorio + "<h3>");
+                }
+        }
+        else{
+            imprimir("<h3>El número debe ser entre 0 y " + numeroMax + "<h3>");
+        }
+        imprimir(">>" + aleatorio);
+
+
+    </script>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div style="text-align: center;">
+        <h4>Práctica por Raúl Trueba Mejía - G4 2022 CDMX</h4>
+        <a href="https://www.linkedin.com/in/deepfx/"><img src="linkedin.png" alt="Contacto Raúl Trueba"></a>
+        <a><img src="one.png" alt="Contacto Raúl Trueba" width="36" height="36"></a>
+        <a><img src="logoalura.svg" alt="Contacto Raúl Trueba" width="32" height="32"></a>       
+    </div>
+</html>
